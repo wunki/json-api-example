@@ -44,16 +44,11 @@ namespace MyApi
                 });
                 context.SaveChanges();
             }
-            app.UseHttpsRedirection();
 
+            app.UseHttpsRedirection();
             app.UseRouting();
             app.UseJsonApi();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
         }
     }
 }
