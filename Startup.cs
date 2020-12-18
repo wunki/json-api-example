@@ -39,7 +39,7 @@ namespace MyApi
 
             if (!context.People.Any())
             {
-                var person = context.People.Add(new Person
+                context.People.Add(new Person
                 {
                     Name = "John Doe",
                     TodoItems = new List<TodoItem>
@@ -50,16 +50,11 @@ namespace MyApi
                 });
                 context.SaveChanges();
             }
-            app.UseHttpsRedirection();
 
+            app.UseHttpsRedirection();
             app.UseRouting();
             app.UseJsonApi();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
         }
     }
 }

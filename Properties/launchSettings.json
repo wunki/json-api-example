@@ -12,12 +12,12 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "people",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MyApi": {
+    "Kestrel": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
