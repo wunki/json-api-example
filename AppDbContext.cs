@@ -8,5 +8,6 @@ namespace MyApi
             : base(options) { }
 
         public DbSet<Person> People { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; }
     }
 }

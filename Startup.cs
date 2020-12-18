@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using JsonApiDotNetCore.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -38,9 +39,14 @@ namespace MyApi
 
             if (!context.People.Any())
             {
-                context.People.Add(new Person
+                var person = context.People.Add(new Person
                 {
-                    Name = "John Doe"
+                    Name = "John Doe",
+                    TodoItems = new List<TodoItem>
+                    {
+                        new TodoItem { Todo = "Make pizza", Priority = 1},
+                        new TodoItem { Todo = "Clean room", Priority = 2}
+                    }
                 });
                 context.SaveChanges();
             }
