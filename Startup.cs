@@ -39,7 +39,7 @@ namespace MyApi
 
             if (!context.People.Any())
             {
-                var person = context.People.Add(new Person
+                context.People.Add(new Person
                 {
                     Name = "John Doe",
                     TodoItems = new List<TodoItem>
