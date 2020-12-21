@@ -363,3 +363,6 @@ FodyWeavers.xsd
 
 # Example database
 /my-api.db
+
+# Jetbrains
+/.idea
